@@ -1,5 +1,23 @@
+.product-details {
+  width: 25vw;
+}
+
+.generic-button {
+  min-width: 40px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.full-flex {
+  flex: 1;
+}
+
 .App {
   text-align: center;
+}
+
+body {
+  background-color: #282c34;
 }
 
 .App-logo {
