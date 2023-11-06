@@ -1,16 +1,20 @@
 import { Button, Card, CardActions, CardContent, Typography } from "@mui/material";
 import { useState } from "react";
 
-function Product({name, quantity, category, price, details, seller}) {
+function Product({name, quantity, category, price, details, seller, incrementOnAdd, decrementOnSub}) {
     const [num, setNum] = useState(0);
     // if num is 0, add to cart | else - num +
 
-    function handleOnAdd(asdsa) {
+    function handleOnAdd() {
         setNum(num+1);
+        // Inform parent
+        incrementOnAdd(price, name, num+1);
     }
 
     function handleOnSub() {
         setNum(num-1);
+        // Inform parent
+        decrementOnSub(price, name, num-1);
     }
 
     return (
